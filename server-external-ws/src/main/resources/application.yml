@@ -1,0 +1,10 @@
+app:
+  config:
+    id: 2
+    port: 7779
+    #EXT_SOCKET,TCP,WEBSOCKET,UDP
+    protoName: WEBSOCKET
+    gatewayIP: 127.0.0.1
+    gatewayPort: 7778
+    # ENUM ServerType
+    serverType: external_ws

@@ -1,0 +1,8 @@
+app:
+  config:
+    #类型加ID，必须唯一
+    id: 99999
+    #EXT_SOCKET,TCP,WEBSOCKET,UDP
+    protoName: TCP
+    gatewayIP: 127.0.0.1
+    gatewayPort: 7778

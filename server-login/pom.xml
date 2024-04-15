@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.bitdragon</groupId>
+        <artifactId>jylj</artifactId>
+        <version>1.0-dev</version>
+    </parent>
+
+    <artifactId>server-login</artifactId>
+    <name>login</name>
+    <packaging>jar</packaging>
+    <version>${login.version}</version>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.bitdragon</groupId>
+            <artifactId>common</artifactId>
+            <version>${common.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bitdragon</groupId>
+            <artifactId>rpc-proto</artifactId>
+            <version>${rpc-proto.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.bitdragon</groupId>
+            <artifactId>logic-base</artifactId>
+            <version>${logic-base.version}</version>
+        </dependency>
+
+    </dependencies>
+</project>

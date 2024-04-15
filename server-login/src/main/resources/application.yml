@@ -1,0 +1,8 @@
+app:
+  config:
+    #类型加ID，必须唯一
+    id: 4
+    gatewayIP: 127.0.0.1
+    gatewayPort: 7778
+    # ENUM ServerType
+    serverType: login

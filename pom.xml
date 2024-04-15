@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>3.2.0</version>
+    </parent>
+
+
+    <groupId>com.bitdragon</groupId>
+    <artifactId>jylj</artifactId>
+    <version>1.0-dev</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>components/database</module>
+        <module>components/common</module>
+        <module>logic-base</module>
+        <module>components/rpc-proto</module>
+
+        <module>server-external-ws</module>
+        <module>server-gateway</module>
+        <module>server-external</module>
+        <module>server-chat</module>
+        <module>server-login</module>
+        <module>server-lobby</module>
+
+
+        <module>test-client</module>
+        <module>netty-client</module>
+    </modules>
+
+    <properties>
+        <!-- jdk 版本 -->
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <encoding>UTF-8</encoding>
+        <springboot.version>3.2.0</springboot.version>
+
+        <!--module version -->
+        <database.version>1.0-dev</database.version>
+        <common.version>1.0-dev</common.version>
+        <rpc-proto.version>1.0-dev</rpc-proto.version>
+
+        <external-ws.version>1.0-dev</external-ws.version>
+        <gateway.version>1.0-dev</gateway.version>
+        <external.version>1.0-dev</external.version>
+        <chat.version>1.0-dev</chat.version>
+        <login.version>1.0-dev</login.version>
+        <lobby.version>1.0-dev</lobby.version>
+        <logic-base.version>1.0-dev</logic-base.version>
+        <test-client.version>1.0-dev</test-client.version>
+
+
+        <!-- 第三方版本 -->
+        <ioGame.version>21.4</ioGame.version>
+        <junit.version>4.13.2</junit.version>
+        <hutool.version>5.8.27</hutool.version>
+        <!-- JSR380 bean 验证框架 -->
+        <hibernate-validator.version>7.0.4.Final</hibernate-validator.version>
+        <!-- JSR380 -->
+        <jakarta.validation-api.version>3.0.2</jakarta.validation-api.version>
+        <!-- JSR380 -->
+        <jakarta.el.version>4.0.2</jakarta.el.version>
+        <protobuf.version>4.26.1</protobuf.version>
+
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+                <version>${springboot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-log4j2</artifactId>-->
+        <!--        </dependency>-->
+    </dependencies>
+
+</project>
